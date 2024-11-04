@@ -1,0 +1,13 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+includedir=@PKG_CONFIG_INCLUDEDIR@
+libdir=@PKG_CONFIG_LIBDIR@
+
+Name: lib@PROJECT_NAME@
+Description: Template library for quickly generating new Cmake project.
+URL: https://github.com/WissonRobotics/@PROJECT_NAME@
+Version: @TemplateLibrary_VERSION@
+CFlags: -I${includedir} @PKG_CONFIG_DEFINES@
+Libs: -L${libdir} -lTemplateLibrary -pthread
+Requires: @PKG_CONFIG_REQUIRES@
+
